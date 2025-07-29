@@ -56,6 +56,7 @@
             color: var(--text-primary);
             min-height: 100vh;
             display: flex;
+            flex-direction: column; /* Changed for footer */
             align-items: center;
             justify-content: center;
             padding: 1rem;
@@ -97,6 +98,7 @@
             position: relative;
             overflow: hidden;
             animation: slideUp 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            margin-bottom: 2rem; /* Space for footer */
         }
 
         .container::before {
@@ -617,16 +619,27 @@
             0% { transform: translateX(-100%); }
             100% { transform: translateX(100%); }
         }
+        
+        /* ===== FOOTER ===== */
+        .footer {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            padding: 1rem;
+        }
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 768px) {
             body {
                 padding: 0.5rem;
+                justify-content: flex-start; /* Align to top on mobile */
             }
 
             .container {
                 padding: 1.5rem;
                 border-radius: 1.5rem;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
             }
 
             .header {
@@ -665,7 +678,7 @@
         @media (max-width: 480px) {
             .container {
                 padding: 1rem;
-                margin: 0.25rem;
+                margin: 0.5rem;
             }
 
             .logo {
@@ -760,6 +773,10 @@
         
         <div id="status" aria-live="polite"></div>
     </div>
+
+    <footer class="footer">
+        Feito por HAlexandre em 29 de Julho de 2025 às 22:14
+    </footer>
 
     <script>
         // ===== ICONS & CONSTANTS =====
